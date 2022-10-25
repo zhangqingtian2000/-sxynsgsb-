@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: red;
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            animation: mymove 15s;
+            position: relative;
+        }
+        @keyframes mymove{
+            0%{
+                background-color: #4eb7e5;
+                left: 0px;
+                top: 0px;
+            }
+            25%{
+                background-color: #cece50;
+                left: 200px;
+                top: 0;
+            }
+            50%{
+                background-color: #54d399;
+                left: 200px;
+                top: 100px;
+            }
+            75%{
+                background-color: #b777f3;
+                left: 0px;
+                top: 100px;
+            }
+            100%{
+                background-color: #f38888;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+<script>
+    var input = document.getElementById("input")
+    input.onblur  = function ()
+    {
+        var valueInput = document.getElementById("input").value
+        alert(valueInput)
+    }
+</script>
+    <div id="box">
+    </div>
+</body>
+</html>
