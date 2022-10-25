@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 7px;
+        }
+        #one{
+            background-color: rgba(98, 98, 248, 0.99);
+            border: 1px solid rgba(98, 98, 248, 0.99);
+            height: 50px;
+            width: 50px;
+            position: relative;
+        }
+        p{
+            text-align: center;
+        }
+        #two{
+            background-color: red;
+            border: 1px solid red;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <p id="p1">😀</p>
+    </div>
+    <div id="two">
+        <p class="p2">😭</p>
+    </div>
+    <script>
+        var one=  document.getElementById("one")
+        one.onmouseover  = function(){
+            this.style.width= "200px"
+            var p1 =  document.getElementById("p1")
+            p1.innerText= "访客Vistor"
+        }
+        one.onmouseout = function(){
+            this.style.width= "50px"
+            var p1 =  document.getElementById("p1")
+            p1.innerText= ""
+        }
+
+        var two =  document.getElementById("two")
+        two.onmouseover  = function(){
+            this.style.width= "200px"
+            var p2 = document.getElementsByClassName("p2")
+            p2[0].innerText= "学生student"
+        }
+        two.onmouseout = function(){
+            this.style.width= "50px"
+            var p2 = document.getElementsByClassName("p2")
+            p2[0].innerText= ""
+        }
+    </script>
+</body>
+</html>
